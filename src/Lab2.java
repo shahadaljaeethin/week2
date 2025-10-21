@@ -123,10 +123,22 @@ Q(7);
 =======================================================================
 */
 Q(8);
+        fibonacci(10);
     }//main
 
 
+public static void fibonacci(int size){
+ArrayList<Integer> numbers = new ArrayList<>();
+int seq =0,next;
+for(int i=0;i<=size;i++){
+    numbers.add(seq);
+    if(seq!=0)
+    seq+=numbers.get(i-1);
+    else seq++;
+}
+print(""+numbers);
 
+}
 
 public static int rand(int start,int last){
     Random random = new Random();
